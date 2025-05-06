@@ -10,7 +10,7 @@ const userScore = document.querySelector(".score");
 const attempts = document.querySelector(".remainder");
 const result = document.querySelector(".result");
 
-userScore.textContent = 5;
+userScore.textContent = 0;
 attempts.textContent = 5;
 
 //////Fetch function
