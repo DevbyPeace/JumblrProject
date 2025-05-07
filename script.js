@@ -88,11 +88,6 @@ enterBtn.addEventListener("click", function () {
   // console.log(word)
 });
 
-// Compare
-// enterBtn.addEventListener('click', function (fn) {
-//     if (textInput.value === word) {
-//     }
-// });
 
 // async function scrambler(word) {
 //   const arrWord = await word;
