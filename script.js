@@ -67,7 +67,7 @@ enterBtn.addEventListener("click", function () {
   if (guess === word.toLowerCase()) {
     // console.log("Correct");
     result.textContent = "Correct!";
-    setTimeout(() => (result.textContent = ""), 1000);
+    setTimeout(() => (result.textContent = ""), 4000);
     userScore.textContent++;
     textInput.value = "";
     final();
@@ -82,7 +82,7 @@ enterBtn.addEventListener("click", function () {
     } else {
       console.log("Wrong");
       result.textContent = "Wrong!";
-      setTimeout(() => (result.textContent = ""), 1000);
+      setTimeout(() => (result.textContent = ""), 4000);
       attempts.textContent--;
     }
   }
