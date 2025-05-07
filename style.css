@@ -2,23 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: solid red; */
+  border: solid red;
 }
+
 body {
   height: 100vh;
   width: 100vw;
-  font-size: 30px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: medium;
 }
+
 h1 {
   text-align: center;
   margin-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-bottom: solid 1px;
 }
 p {
   /* margin-left: 5vw; */
   text-align: center;
+  font-size: medium;
 }
 h2 {
   text-align: center;
@@ -35,7 +39,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 45vh;
   width: 100vw;
 }
 
@@ -53,7 +57,7 @@ h2 {
 
 .container .comparer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -74,8 +78,8 @@ h2 {
 }
 
 .container .comparer .enterBtn {
-  height: 3rem;
-  width: 15%;
+  height: 2.5rem;
+  width: 21%;
   border-radius: 15px;
 }
 .container .refresh .ref {
@@ -87,208 +91,67 @@ h2 {
   width: 25%;
   border-radius: 15px;
 }
-.result{
+.result {
   text-align: center;
   font-size: 40px;
 }
 
+/* === Responsive Layout Adjustments === */
 
-/* === Enhanced Professional Color Scheme === */
+body {
+  background-color: #f5f0e1;
+  color: #2f2f2f;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-:root {
-    --text-dark: #2c3e50;        /* Dark slate for body text */
-    --text-muted: #7f8c8d;       /* Soft gray for subtitles or muted text */
-    --bg-light: #f4f6f8;         /* Page background */
-    --primary: #3498db;          /* Sky Blue - primary color */
-    --primary-dark: #2980b9;
-    --secondary: #27ae60;        /* Sage Green - secondary or success */
-    --accent: #e67e22;           /* Muted Orange - warnings or accents */
-    --input-bg: #ecf0f1;
-  }
-  
-  /* Apply the scheme */
-  
-  body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  h1, h2 {
-    color: var(--text-dark);
-  }
-  
-  p {
-    color: var(--text-muted);
-  }
-  
-  input.inputText {
-    background-color: var(--input-bg);
-    border: 1px solid var(--text-muted);
-    color: var(--text-dark);
-  }
-  
-  input.inputText:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 5px var(--primary);
-  }
-  
-  .enterBtn,
-  .ref {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .enterBtn:hover,
-  .ref:hover {
-    background-color: var(--primary-dark);
-  }
-  
-  .enterBtn:active,
-  .ref:active {
-    background-color: #1c5980;
-  }
-  
-  /* You can use .secondary-btn or .accent-btn classes for extra styling if needed */
-  
-  .secondary-btn {
-    background-color: var(--secondary);
-    color: white;
-  }
-  
-  .accent-btn {
-    background-color: var(--accent);
-    color: white;
-  }
-  
+.enterBtn,
+.ref {
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
 
+.enterBtn:hover,
+.ref:hover {
+  background-color: #d35c47;
+}
 
-  /* === Responsive Layout Adjustments === */
+.result {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
-.container {
-    width: 90vw;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-  }
-  
-  .container .comparer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  /* .container .comparer .inputText,
-  .container .comparer .enterBtn {
-    width: 100%;
-    max-width: 400px;
-    font-size: 1rem;
-    height: 2.8rem;
-  }
-   */
-  .container .refresh {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .container .refresh .ref {
-    width: 100%;
-    max-width: 200px;
-    height: 3.5rem;
-    font-size: 1rem;
-  }
-  
-  /* Mobile Adjustments */
-  @media (max-width: 768px) {
-    body {
-      font-size: 20px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    .container {
-      gap: 1.5rem;
-    }
-  }
+.result:contains("Correct!") {
+  color: #81b29a;
+}
 
+.result:contains("Wrong!") {
+  color: #f28482;
+}
 
+input.inputText {
+  background-color: #fffaf1;
+  border: 2px solid #3d405b;
+  color: #2f2f2f;
+}
 
+input.inputText:focus {
+  outline: none;
+  border-color: #e07a5f;
+}
 
+.score,
+.remainder {
+  font-weight: bold;
+  color: #3d405b;
+}
 
-
-
-
-
-  body {
-    background-color: #f5f0e1;
-    color: #2f2f2f;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .enterBtn,
-  .ref {
-    background-color: #e07a5f;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .enterBtn:hover,
-  .ref:hover {
-    background-color: #d35c47;
-  }
-  
-  .result {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .result:contains("Correct!") {
-    color: #81b29a;
-  }
-  
-  .result:contains("Wrong!") {
-    color: #f28482;
-  }
-  
-  input.inputText {
-    background-color: #fffaf1;
-    border: 2px solid #3d405b;
-    color: #2f2f2f;
-  }
-  
-  input.inputText:focus {
-    outline: none;
-    border-color: #e07a5f;
-  }
-  
-  .score,
-  .remainder {
-    font-weight: bold;
-    color: #3d405b;
-  }
-  
-
-
-    
-  .attempts {
-    padding-top: 6%;
-    padding-bottom: 6%;
-    padding-left: 6%;
-  }
-  
+.attempts {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  padding-left: 6%;
+}
