@@ -62,6 +62,7 @@ refresh.addEventListener("click", final);
 
 enterBtn.addEventListener("click", function () {
   // console.log(word);
+  textInput.blur();
   const guess = textInput.value.trim().toLowerCase();
   if (guess === word.toLowerCase()) {
     // console.log("Correct");
