@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: solid red;
+  /* border: solid red; */
 }
 
 body {
@@ -47,7 +47,7 @@ h2 {
   height: 25vh;
   width: 90vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 3rem;
   flex-direction: column;
   /* border: solid 1px; */
@@ -57,7 +57,8 @@ h2 {
 
 .container .comparer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -79,7 +80,7 @@ h2 {
 
 .container .comparer .enterBtn {
   height: 2.5rem;
-  width: 21%;
+  width: 5rem;
   border-radius: 15px;
 }
 .container .refresh .ref {
@@ -87,9 +88,9 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 3rem; */
-  height: 4rem;
-  width: 25%;
-  border-radius: 15px;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 20px;
 }
 .result {
   text-align: center;
